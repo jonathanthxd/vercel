@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 | PERUKISTÁN</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+
+body{
+  background: radial-gradient(circle at top,#1a0d05,#020202 70%);
+  color:#e5e5e5;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  text-align:center;
+}
+
+/* GLOW */
+.glow{
+  position:absolute;
+  width:800px;height:800px;
+  background:radial-gradient(circle,rgba(255,115,0,0.4),transparent 70%);
+  filter:blur(150px);
+}
+
+/* CONTENIDO */
+.container{
+  position:relative;
+  z-index:2;
+}
+
+h1{
+  font-size:120px;
+  background:linear-gradient(90deg,#ff6a00,#ffae00);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+h2{
+  margin-top:10px;
+}
+
+p{
+  color:#aaa;
+  margin:15px 0 30px;
+}
+
+.btn{
+  padding:12px 25px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+
+  background:linear-gradient(135deg,#ff6a00,#ffae00);
+  color:#000;
+}
+
+.btn:hover{
+  box-shadow:0 0 30px rgba(255,115,0,0.6);
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow"></div>
+
+<div class="container">
+  <h1>404</h1>
+  <h2>Territorio desconocido</h2>
+  <p>La página que buscas no existe en PERUKISTÁN.</p>
+  <a href="index.html" class="btn">Volver al inicio</a>
+</div>
+
+</body>
+</html>
