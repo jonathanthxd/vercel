@@ -12,108 +12,11 @@
 <link rel="stylesheet" href="assets/css/components.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
 <script src="assets/js/main.js"></script>
-  
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
-
-body{
-  background: radial-gradient(circle at top,#1a0d05,#020202 70%);
-  color:#e5e5e5;
-}
-
-/* GLOW */
-.glow{
-  position:fixed;
-  width:900px;height:900px;
-  background:radial-gradient(circle,rgba(255,115,0,0.3),transparent 70%);
-  filter:blur(160px);
-  top:-200px;left:50%;
-  transform:translateX(-50%);
-}
-
-/* NAV */
-nav{
-  position:fixed;top:20px;left:50%;
-  transform:translateX(-50%);
-  width:85%;
-  padding:15px 30px;
-  border-radius:20px;
-  background:rgba(20,20,20,0.35);
-  backdrop-filter:blur(25px);
-  border:1px solid rgba(255,255,255,0.08);
-  display:flex;justify-content:center;
-  z-index:1000;
-}
-
-nav h1{
-  background:linear-gradient(90deg,#ff6a00,#ffae00);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-
-/* HERO */
-.hero{
-  padding:180px 10% 80px;
-  text-align:center;
-}
-
-.hero h2{
-  font-size:50px;
-  background:linear-gradient(90deg,#ff6a00,#ffae00);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-
-.hero p{
-  margin-top:20px;
-  color:#aaa;
-  max-width:700px;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-/* BLOQUES */
-.section{
-  padding:80px 10%;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:40px;
-}
-
-.block{
-  padding:30px;
-  border-radius:20px;
-
-  background:rgba(255,255,255,0.03);
-  backdrop-filter:blur(15px);
-  border:1px solid rgba(255,255,255,0.05);
-
-  transition:0.3s;
-}
-
-.block:hover{
-  transform:translateY(-10px);
-  border-color:rgba(255,115,0,0.4);
-  box-shadow:0 0 30px rgba(255,115,0,0.15);
-}
-
-.block h3{
-  color:#ff8c00;
-  margin-bottom:10px;
-}
-
-.block p{
-  color:#aaa;
-  line-height:1.6;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:40px;
-  color:#666;
-}
-</style>
-</head>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/ui.js"></script>
+<script>
+  UI.init();
+</script>
 
 <body>
 
