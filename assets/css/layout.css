@@ -1,0 +1,118 @@
+/* =========================
+   PERUKISTÁN LAYOUT SYSTEM
+========================= */
+
+/* CONTENEDOR GLOBAL */
+.container{
+  width:90%;
+  max-width:1300px;
+  margin:auto;
+  position:relative;
+  z-index:2;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 20px;
+}
+
+/* GRID BASE */
+.grid{
+  display:grid;
+  gap:30px;
+}
+
+.grid-2{
+  grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+}
+
+.grid-3{
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+
+.grid-4{
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+
+/* FLEX SYSTEM */
+.flex{
+  display:flex;
+}
+
+.flex-center{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.flex-between{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.flex-column{
+  display:flex;
+  flex-direction:column;
+}
+
+/* SPACING */
+.section{
+  padding:120px 0;
+}
+
+.section-sm{
+  padding:80px 0;
+}
+
+.section-lg{
+  padding:160px 0;
+}
+
+/* SIDEBAR LAYOUT */
+.layout-sidebar{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:40px;
+}
+
+.sidebar{
+  position:sticky;
+  top:120px;
+}
+
+/* PRODUCT PAGE */
+.layout-product{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:60px;
+}
+
+/* CENTER BLOCK */
+.center{
+  text-align:center;
+}
+
+/* MAX WIDTH TEXT */
+.text-container{
+  max-width:800px;
+  margin:auto;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+  .layout-sidebar{
+    grid-template-columns:1fr;
+  }
+
+  .layout-product{
+    grid-template-columns:1fr;
+  }
+
+}
