@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Categorías | PERUKISTÁN</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+
+body{
+  background: radial-gradient(circle at top,#1a0d05,#020202 70%);
+  color:#e5e5e5;
+}
+
+/* 🔥 GLOW */
+.glow{
+  position:fixed;
+  width:900px;height:900px;
+  background:radial-gradient(circle,rgba(255,115,0,0.3),transparent 70%);
+  filter:blur(160px);
+  top:-200px;left:50%;
+  transform:translateX(-50%);
+  z-index:0;
+}
+
+/* 💎 NAVBAR */
+nav{
+  position:fixed;
+  top:20px;left:50%;
+  transform:translateX(-50%);
+  width:85%;
+  padding:15px 30px;
+  display:flex;justify-content:space-between;align-items:center;
+  border-radius:20px;
+  background:rgba(20,20,20,0.35);
+  backdrop-filter:blur(25px) saturate(180%);
+  border:1px solid rgba(255,255,255,0.08);
+  z-index:1000;
+}
+
+nav h1{
+  font-weight:800;
+  background:linear-gradient(90deg,#ff6a00,#ffae00);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* 🧠 HEADER */
+.header{
+  text-align:center;
+  padding-top:160px;
+  margin-bottom:60px;
+  position:relative;
+  z-index:2;
+}
+
+.header h2{
+  font-size:50px;
+  background:linear-gradient(90deg,#ff6a00,#ffae00);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.header p{
+  color:#aaa;
+  margin-top:10px;
+}
+
+/* 🧩 GRID */
+.categories{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:35px;
+  padding:0 10% 100px;
+  position:relative;
+  z-index:2;
+}
+
+/* 💎 CARD */
+.category{
+  position:relative;
+  height:220px;
+  border-radius:20px;
+  overflow:hidden;
+  cursor:pointer;
+
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.05);
+  backdrop-filter:blur(20px);
+
+  transition:0.4s;
+}
+
+/* 🔥 efecto interno */
+.category::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at top,rgba(255,115,0,0.25),transparent 70%);
+  opacity:0;
+  transition:0.4s;
+}
+
+.category:hover::before{
+  opacity:1;
+}
+
+/* ✨ glow externo */
+.category:hover{
+  transform:translateY(-15px) scale(1.03);
+  border-color:rgba(255,115,0,0.6);
+  box-shadow:0 0 50px rgba(255,115,0,0.25);
+}
+
+/* 🧠 CONTENIDO */
+.content{
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  right:20px;
+  z-index:2;
+}
+
+.content h3{
+  font-size:24px;
+  color:#ff8c00;
+}
+
+.content p{
+  font-size:14px;
+  color:#ccc;
+}
+
+/* 🔥 ICON */
+.icon{
+  position:absolute;
+  top:20px;
+  right:20px;
+  font-size:40px;
+  opacity:0.15;
+  transition:0.3s;
+}
+
+.category:hover .icon{
+  transform:scale(1.2);
+  opacity:0.3;
+}
+
+/* 🎯 BOTÓN INVISIBLE CLICK */
+.category a{
+  position:absolute;
+  inset:0;
+  z-index:3;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px;
+  color:#666;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .header h2{
+    font-size:36px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow"></div>
+
+<nav>
+  <h1>PERUKISTÁN</h1>
+</nav>
+
+<!-- HEADER -->
+<div class="header">
+  <h2>Explora el Poder</h2>
+  <p>Elige tu camino dentro de PERUKISTÁN</p>
+</div>
+
+<!-- CATEGORÍAS -->
+<section class="categories">
+
+  <!-- RANKS -->
+  <div class="category">
+    <div class="icon">👑</div>
+    <div class="content">
+      <h3>Rangos</h3>
+      <p>Ascenso, prestigio y dominio absoluto.</p>
+    </div>
+    <a href="store.html"></a>
+  </div>
+
+  <!-- KITS -->
+  <div class="category">
+    <div class="icon">⚔️</div>
+    <div class="content">
+      <h3>Kits</h3>
+      <p>Equipamiento para sobrevivir y dominar.</p>
+    </div>
+    <a href="store.html"></a>
+  </div>
+
+  <!-- COSMETICS -->
+  <div class="category">
+    <div class="icon">✨</div>
+    <div class="content">
+      <h3>Cosméticos</h3>
+      <p>Destaca visualmente sobre todos.</p>
+    </div>
+    <a href="store.html"></a>
+  </div>
+
+  <!-- EXCLUSIVOS -->
+  <div class="category">
+    <div class="icon">🔥</div>
+    <div class="content">
+      <h3>Exclusivos</h3>
+      <p>Contenido limitado solo para élite.</p>
+    </div>
+    <a href="store.html"></a>
+  </div>
+
+</section>
+
+<footer>
+© 2026 PERUKISTÁN Network
+</footer>
+
+</body>
+</html>
