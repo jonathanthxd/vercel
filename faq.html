@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ | PERUKISTÁN</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+
+body{
+  background: radial-gradient(circle at top,#1a0d05,#020202 70%);
+  color:#e5e5e5;
+}
+
+/* GLOW */
+.glow{
+  position:fixed;
+  width:900px;height:900px;
+  background:radial-gradient(circle,rgba(255,115,0,0.3),transparent 70%);
+  filter:blur(160px);
+  top:-200px;left:50%;
+  transform:translateX(-50%);
+}
+
+/* NAV */
+nav{
+  position:fixed;top:20px;left:50%;
+  transform:translateX(-50%);
+  width:85%;
+  padding:15px 30px;
+  border-radius:20px;
+  background:rgba(20,20,20,0.35);
+  backdrop-filter:blur(25px);
+  border:1px solid rgba(255,255,255,0.08);
+  display:flex;justify-content:center;
+  z-index:1000;
+}
+
+nav h1{
+  background:linear-gradient(90deg,#ff6a00,#ffae00);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* CONTENEDOR */
+.container{
+  padding:160px 10%;
+  max-width:900px;
+  margin:auto;
+}
+
+h2{
+  text-align:center;
+  font-size:42px;
+  background:linear-gradient(90deg,#ff6a00,#ffae00);
+  -webkit-background-clip:text;
+  color:transparent;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  text-align:center;
+  color:#aaa;
+  margin-bottom:40px;
+}
+
+/* FAQ ITEM */
+.faq{
+  border-radius:15px;
+  margin-bottom:15px;
+  overflow:hidden;
+
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.05);
+  backdrop-filter:blur(15px);
+
+  transition:0.3s;
+}
+
+.faq:hover{
+  border-color:rgba(255,115,0,0.4);
+}
+
+.question{
+  padding:18px;
+  cursor:pointer;
+  font-weight:600;
+  position:relative;
+}
+
+.question::after{
+  content:"+";
+  position:absolute;
+  right:20px;
+  font-size:20px;
+}
+
+.faq.active .question::after{
+  content:"−";
+}
+
+/* RESPUESTA */
+.answer{
+  max-height:0;
+  overflow:hidden;
+  transition:0.4s ease;
+  padding:0 18px;
+  color:#aaa;
+}
+
+.faq.active .answer{
+  max-height:200px;
+  padding:10px 18px 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow"></div>
+
+<nav>
+  <h1>PERUKISTÁN</h1>
+</nav>
+
+<div class="container">
+
+  <h2>Preguntas Frecuentes</h2>
+  <div class="subtitle">Resolvemos tus dudas antes de que las tengas</div>
+
+  <div class="faq">
+    <div class="question">¿Cómo compro un rango?</div>
+    <div class="answer">Selecciona un producto y contacta mediante Discord, WhatsApp o PayPal. Luego recibirás tu rango tras verificación.</div>
+  </div>
+
+  <div class="faq">
+    <div class="question">¿Cuánto tarda la entrega?</div>
+    <div class="answer">Entre 5 y 30 minutos dependiendo de la disponibilidad del staff.</div>
+  </div>
+
+  <div class="faq">
+    <div class="question">¿Puedo perder mi rango?</div>
+    <div class="answer">Solo si incumples las reglas del servidor.</div>
+  </div>
+
+  <div class="faq">
+    <div class="question">¿Aceptan reembolsos?</div>
+    <div class="answer">No se realizan reembolsos una vez entregado el producto.</div>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll(".faq").forEach(faq=>{
+  faq.addEventListener("click",()=>{
+    faq.classList.toggle("active");
+  });
+});
+</script>
+
+</body>
+</html>
