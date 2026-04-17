@@ -1,0 +1,200 @@
+/* =========================
+   PERUKISTÁN GLOBAL STYLE
+========================= */
+
+:root{
+  --primary:#ff6a00;
+  --secondary:#ffae00;
+  --bg-dark:#020202;
+  --bg-soft:#1a0d05;
+  --text:#e5e5e5;
+  --text-soft:#aaa;
+}
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background: radial-gradient(circle at top,var(--bg-soft),var(--bg-dark) 70%);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+/* =========================
+   GLOW BACKGROUND
+========================= */
+.glow{
+  position:fixed;
+  width:800px;
+  height:800px;
+  background:radial-gradient(circle,rgba(255,106,0,0.35),transparent 70%);
+  filter:blur(150px);
+  top:-200px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:0;
+}
+
+/* =========================
+   NAVBAR (GLASS PRO)
+========================= */
+nav{
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  width:85%;
+  padding:15px 30px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  border-radius:20px;
+
+  background:rgba(20,20,20,0.35);
+  backdrop-filter:blur(25px) saturate(180%);
+  border:1px solid rgba(255,255,255,0.08);
+
+  z-index:1000;
+}
+
+nav h1{
+  font-weight:800;
+  letter-spacing:2px;
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+nav a{
+  color:#bbb;
+  margin-left:25px;
+  text-decoration:none;
+  position:relative;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#fff;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  bottom:-5px;
+  left:0;
+  width:0%;
+  height:2px;
+  background:var(--primary);
+  transition:0.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn{
+  padding:14px 28px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  display:inline-block;
+  transition:0.3s;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#000;
+  box-shadow:0 0 25px rgba(255,106,0,0.4);
+}
+
+.btn-primary:hover{
+  transform:translateY(-4px);
+  box-shadow:0 0 45px rgba(255,106,0,0.7);
+}
+
+.btn-secondary{
+  border:1px solid rgba(255,255,255,0.1);
+  color:#ccc;
+}
+
+.btn-secondary:hover{
+  border-color:var(--primary);
+  color:#fff;
+}
+
+/* =========================
+   CARDS (GLOBAL)
+========================= */
+.card{
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.05);
+  border-radius:18px;
+  padding:25px;
+  transition:0.35s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.02);
+  border-color:rgba(255,106,0,0.5);
+  box-shadow:0 0 35px rgba(255,106,0,0.2);
+}
+
+/* =========================
+   TITLES
+========================= */
+.gradient-text{
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section{
+  padding:120px 10%;
+  position:relative;
+  z-index:2;
+}
+
+/* =========================
+   GRID
+========================= */
+.grid{
+  display:grid;
+  gap:30px;
+}
+
+.grid-3{
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer{
+  text-align:center;
+  padding:40px;
+  color:#666;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:900px){
+  nav{
+    width:95%;
+  }
+}
